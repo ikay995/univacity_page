@@ -1,0 +1,90 @@
+<div class="example-container">
+  
+    <mat-sidenav-container [hasBackdrop]="true" class="example-sidenav-container">
+      <mat-sidenav class="side-w" mobileClass="mobile" #snav [mode]="'side'" style="width: 400px; "
+        [opened]="open" [fixedInViewport]="true" fixedTopGap="56" [hidden]="false">
+        <div class="p-2">
+                <ul class="navbar-nav nav-top me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown mb-4 bg-light">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Products
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown mb-4 bg-light">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Solutions
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown mb-4 bg-light">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown mb-4 bg-light">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Our Company
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown mb-4 bg-light">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Account Information
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                      <li><a class="dropdown-item" href="#">Applications</a></li>
+                      <li><a class="dropdown-item" href="#">Bookings</a></li>
+                      <li><a class="dropdown-item" href="#">Payments</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                    </ul>
+                  </li>
+                </ul>
+  
+        </div>
+        <div class="form-group">
+            <label for="search" style="color: #fff; font-weight: 500;">Search</label>
+            <input type="text" id="search" name="search" class="form-control" />
+        </div>
+        <ng-container>
+          <div class="profile mt-4">
+            <button class="w-100" mat-button [matMenuTriggerFor]="aboveMenu"><img src="./assets/images/Frame 565.png" alt="Search" class="img-fluid my-auto frame" style="width: 43px; height: 32px;">
+              </button>
+            <mat-menu #aboveMenu="matMenu" [xPosition]="'after'" class="profile  glass ">
+              <button mat-menu-item>
+                <a class="pointer">{{'Dashboard'}}</a>
+              </button>
+              <button mat-menu-item>
+                <a class="pointer">{{'Applications'}}</a>
+              </button>
+              <button mat-menu-item>
+                <a class="pointer">{{'Settings'}}</a>
+              </button>
+              <button mat-menu-item><a class=" pointer">{{'Sign out'}}</a></button>
+              <button mat-menu-item><a class="d-block" href="{{''}}"
+                  target="_blank">{{'Help'}}</a></button>
+            </mat-menu>
+          </div>
+        </ng-container>
+      </mat-sidenav>
+  
+      <mat-sidenav-content class=" ">
+        <ng-content>
+        </ng-content>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

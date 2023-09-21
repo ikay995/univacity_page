@@ -1,0 +1,20 @@
+.btn.btn-custom {
+    border-radius: 8px;
+    background: var(--brand-primary-600, #184EC9);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.overview-img {
+    position: relative;
+    left: 40px;
+}
+
+@media screen and (max-width: 500px) {
+        .overview-img {
+        position: inherit;
+        width: 100%;
+    }
+  }

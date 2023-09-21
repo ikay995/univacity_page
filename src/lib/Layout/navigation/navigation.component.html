@@ -1,0 +1,3 @@
+<app-main-nav (openSideNav)="isToggled($event)"></app-main-nav>
+<app-navbar [isMobile]="isMobile"></app-navbar>
+<app-vertical-nav *ngIf="isMobile && toggleClicked" [closeNav]="openNav"></app-vertical-nav>
