@@ -26,9 +26,6 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void { 
     this.isMobile = this.nS.isMobile;
-    if(!this.isMobile) window.onresize = function(event) {
-      window.location.reload()
-    };
   }
 
   isToggled(data: boolean) {
