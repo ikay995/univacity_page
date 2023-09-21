@@ -19,13 +19,15 @@ export class NavigationComponent implements OnInit {
   openNav: boolean = true;
 
   constructor(private nS: NavigationService) {
-    window.onresize = function(event) {
-      window.location.reload()
-    };
+   
   }
 
   ngOnInit(): void { 
     this.isMobile = this.nS.isMobile;
+    if(!this.isMobile || localStorage.getItem('reloaded'))  window.onresize = function(event) {
+      window.location.reload()
+    };
+    if(!this.isMobile)localStorage.setItem('reloaded', 'true')
   }
 
   isToggled(data: boolean) {
