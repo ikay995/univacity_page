@@ -1,5 +1,5 @@
-<div class="light">
-  <app-dashboard-course></app-dashboard-course>
-  <app-dashboard-information></app-dashboard-information>
-  <app-dashboard-footer></app-dashboard-footer>
+<div class="light" [ngClass]="{dark: darkmode}">
+  <app-dashboard-course [darkmode]="darkmode"></app-dashboard-course>
+  <app-dashboard-information [darkmode]="darkmode"></app-dashboard-information>
+  <app-dashboard-footer [darkmode]="darkmode"></app-dashboard-footer>
 </div>

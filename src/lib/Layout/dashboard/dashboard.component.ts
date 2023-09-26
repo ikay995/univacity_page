@@ -13,12 +13,25 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class DashboardComponent implements OnInit {
   @ViewChild('modal') modal: any;
+  darkmode: boolean = false;
 
   constructor() {
    
   }
 
   ngOnInit(): void { 
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // dark mode
+      this.darkmode = true;
+  }
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change',({ matches }) => {
+  if (matches) {
+    this.darkmode = true
+  } else {
+    this.darkmode = false
+  }
+})
    console.log(this.modal)
   }
 

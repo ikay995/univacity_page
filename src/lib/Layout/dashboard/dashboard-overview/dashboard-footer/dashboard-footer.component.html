@@ -1,5 +1,5 @@
-<div class="row w-100 my-3 my-md-5 footer">
-  <div class="col-sm-12 mt-5 info2">
+<div class="row w-100 my-3 my-md-5 footer" [ngClass]="{dark: darkmode}">
+  <div class="col-sm-12 mt-5 info2" [ngClass]="{dark: darkmode}">
     <h3 class="ms-3 ms-md-5">Other Key Information</h3>
     <p class="ms-3 ms-md-5 pb-2 mt-4">
       Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci
@@ -18,28 +18,28 @@
   <div class="col-sm-12 mt-5 d-flex">
     <div class="row row-cols-sm-2 row-cols-md-4 ms-3 ms-md-5 w-100 w-md-75 info3">
         <div class="col py-1 d-flex flex-column">
-          <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Degree</p>
-          <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Country</p>
-          <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Level</p>
-          <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Study language(s)</p>
+          <p class="my-auto me-auto" [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Degree</p>
+          <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">Country</p>
+          <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">Level</p>
+          <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">Study language(s)</p>
         </div>
         <div class="col py-1 d-flex flex-column">
-            <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: #111;">Bachelor's Degree</p>
-            <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: #111;">United States</p>
-            <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: #111;">Undergraduates</p>
-            <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: #111;">English</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">Bachelor's Degree</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">United States</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">Undergraduates</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">English</p>
         </div>
         <div class="col py-1 d-flex flex-column">
-            <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Campuses</p>
-            <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Duration</p>
-            <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Attendance</p>
-            <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: var(--neutral-light-200, #52555D);">Type</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">Campuses</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">Duration</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">Attendance</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">Type</p>
         </div>
         <div class="col py-1 d-flex flex-column">
-            <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: #111;">London, Lagos<span *ngIf="!nS.isMobile">, Abuja</span></p>
-            <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: #111;">5 years</p>
-            <p class="my-auto me-auto" style="font-size: 18px; font-weight: 500; color: #111;">Hybrid</p>
-            <p class="my-2 me-auto" style="font-size: 18px; font-weight: 500; color: #111;">Full Time</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">London, Lagos<span *ngIf="!nS.isMobile">, Abuja</span></p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">5 years</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-auto me-auto" style="font-size: 18px; font-weight: 500;">Hybrid</p>
+            <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" class="my-2 me-auto" style="font-size: 18px; font-weight: 500;">Full Time</p>
         </div>
       </div>
   </div>
@@ -48,36 +48,36 @@
     <div class="col-sm-12 mt-5 d-flex">
         <div class="row row-cols-sm-2 row-cols-md-4 ms-3 ms-md-5 w-100">
             <div class="col py-1 d-flex flex-column">
-              <p  style="font-size: 18px; font-weight: 600; color: var(--neutral-light-100, #111);">Products</p>
-              <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Univacity</p>
-              <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Univisa</p>
-              <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Uniflight</p>
-              <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Unishop</p>
+              <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}"  style="font-size: 18px; font-weight: 600;">Products</p>
+              <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Univacity</p>
+              <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Univisa</p>
+              <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Uniflight</p>
+              <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Unishop</p>
             </div>
             <div class="col py-1 d-flex flex-column">
-                <p  style="font-size: 18px; font-weight: 600; color: var(--neutral-light-100, #111);">Resources</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Blog</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Help Center</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Pricing</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 600">Resources</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Blog</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Help Center</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Pricing</p>
             </div>
             <div class="col py-1 d-flex flex-column">
-                <p  style="font-size: 18px; font-weight: 600; color: var(--neutral-light-100, #111);">Company</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">About</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Subscribe</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Contact us</p>
-                <p  style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Careers</p>
-                <p style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">Media Kit</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 600;">Company</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">About</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Subscribe</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Contact us</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Careers</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">Media Kit</p>
             </div>
             <div class="col py-1 d-flex flex-column">
-                <p style="font-size: 18px; font-weight: 600; color: var(--neutral-light-100, #111);">Contact</p>
-                <p style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);">+236 251 881 9917</p>
-                <p style="font-size: 18px; font-weight: 500; color: var(--neutral-light-100, #111);"><a href="#" style="text-decoration-line: none;">hello@univacity.com</a></p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 600;">Contact</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;">+236 251 881 9917</p>
+                <p [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 18px; font-weight: 500;"><a href="#" style="text-decoration-line: none;">hello@univacity.com</a></p>
             </div>
           </div>
       </div>
 </div>
-<div class="row w-100 mt-3 mt-md-5 dash-info">
-    <div class="col-sm-12 info1">
+<div class="row w-100 mt-3 mt-md-5 dash-info" [ngClass]="{dark: darkmode}">
+    <div class="col-sm-12 info1" [ngClass]="{dark: darkmode}">
       <div class="d-flex justify-content-between py-4">
         <p class="ms-5 my-auto">
             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -136,7 +136,7 @@
       </div>
     </div>
   </div>
-  <div class="row w-100 dash-info" style="border: none;">
+  <div class="row w-100 dash-info" [ngClass]="{dark: darkmode}" style="border: none;">
     <div class="col-sm-12 info1">
       <div class="d-flex justify-content-between py-4">
         <p class="ms-5 my-auto">

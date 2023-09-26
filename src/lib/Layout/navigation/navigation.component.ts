@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core'; 
+import {Component, Input, OnInit } from '@angular/core'; 
 import { NgIf, NgFor } from '@angular/common';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { NavBarComponent } from './navbar/navbar.component';
@@ -17,8 +17,10 @@ export class NavigationComponent implements OnInit {
   isMobile: boolean;
   toggleClicked: boolean = false;
   openNav: boolean = true;
+  @Input('darkmode')darkmode: boolean;
 
   constructor(private nS: NavigationService) {
+
    
   }
 

@@ -1,4 +1,4 @@
-<div class="row mx-2 mx-md-5 pt-3 pt-md-5 justify-content-between dash-overview">
+<div class="row mx-2 mx-md-5 pt-3 pt-md-5 justify-content-between dash-overview" [ngClass]="{dark: darkmode}">
   <div class="col-sm-12 col-md-6 mt-3 mb-3 mb-md-0">
     <p class="para1"><span class="me-3">United States</span>><span class="mx-3">Havard University</span>><span
         class="ms-3">Design</span></p>
@@ -27,7 +27,7 @@
             <path
               d="M12 17C12.2833 17 12.521 16.904 12.713 16.712C12.9043 16.5207 13 16.2833 13 16C13 15.7167 12.9043 15.479 12.713 15.287C12.521 15.0957 12.2833 15 12 15C11.7167 15 11.4793 15.0957 11.288 15.287C11.096 15.479 11 15.7167 11 16C11 16.2833 11.096 16.5207 11.288 16.712C11.4793 16.904 11.7167 17 12 17ZM12 13C12.2833 13 12.521 12.904 12.713 12.712C12.9043 12.5207 13 12.2833 13 12V8C13 7.71667 12.9043 7.479 12.713 7.287C12.521 7.09567 12.2833 7 12 7C11.7167 7 11.4793 7.09567 11.288 7.287C11.096 7.479 11 7.71667 11 8V12C11 12.2833 11.096 12.5207 11.288 12.712C11.4793 12.904 11.7167 13 12 13ZM5 21C4.45 21 3.979 20.8043 3.587 20.413C3.19567 20.021 3 19.55 3 19V5C3 4.45 3.19567 3.979 3.587 3.587C3.979 3.19567 4.45 3 5 3H9.2C9.41667 2.4 9.77933 1.91667 10.288 1.55C10.796 1.18333 11.3667 1 12 1C12.6333 1 13.2043 1.18333 13.713 1.55C14.221 1.91667 14.5833 2.4 14.8 3H19C19.55 3 20.021 3.19567 20.413 3.587C20.8043 3.979 21 4.45 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.021 20.8043 19.55 21 19 21H5ZM12 4.25C12.2167 4.25 12.396 4.179 12.538 4.037C12.6793 3.89567 12.75 3.71667 12.75 3.5C12.75 3.28333 12.6793 3.104 12.538 2.962C12.396 2.82067 12.2167 2.75 12 2.75C11.7833 2.75 11.6043 2.82067 11.463 2.962C11.321 3.104 11.25 3.28333 11.25 3.5C11.25 3.71667 11.321 3.89567 11.463 4.037C11.6043 4.179 11.7833 4.25 12 4.25Z"
               fill="#008060" />
-          </svg><span style="color: var(--neutral-light-100, #111); font-weight: 500; font-size: 16px;"><b class="me-3"
+          </svg><span [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style=" font-weight: 500; font-size: 16px;"><b class="me-3"
               style="font-weight: 600;">Deadline:</b> 20th of December, 2023</span>
         </a>
       </div>
@@ -41,7 +41,7 @@
               fill="#111111" />
             </svg>
         </a>
-          <span *ngIf="!nS.isMobile" style="color: #000; font-size: 16px; font-weight: 500;">Share program</span>
+          <span *ngIf="!nS.isMobile" [ngStyle]="{'color': darkmode ? 'var(--neutral-dark-100, #FFF)' : 'var(--neutral-light-100, #111)'}" style="font-size: 16px; font-weight: 500;">Share program</span>
           <svg *ngIf="!nS.isMobile" class="mx-3" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="#F64444"/>
             <path d="M19.3398 16.8333L19.7102 14.4202H17.3948V12.8543C17.3948 12.1942 17.7182 11.5507 18.7552 11.5507H19.8078V9.49627C19.8078 9.49627 18.8526 9.33325 17.9393 9.33325C16.0326 9.33325 14.7862 10.489 14.7862 12.5812V14.4202H12.6667V16.8333H14.7862V22.6666H17.3948V16.8333H19.3398Z" fill="white"/>
